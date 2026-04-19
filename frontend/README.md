@@ -1,16 +1,34 @@
-# React + Vite
+# Фронтенд блога ⚛️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React-фронтенд для приложения блога, собранный с помощью Vite.
 
-Currently, two official plugins are available:
+## 🚀 Стек технологий
+- **Фреймворк**: React
+- **Сборщик**: Vite
+- **Стилизация**: CSS Modules / Ванильный CSS
+- **Иконки**: SVG
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠 Разработка
 
-## React Compiler
+### Локальный запуск
+```bash
+npm install
+npm run dev
+```
+Приложение будет доступно по адресу `http://localhost:5173`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Сборка для продакшена
+```bash
+npm run build
+```
+Готовые файлы будут находиться в папке `dist`, они готовы для раздачи через Nginx или другой веб-сервер.
 
-## Expanding the ESLint configuration
+## 📁 Структура проекта
+- `src/pages` - Основные компоненты страниц (Главная, Вход, Регистрация и т.д.)
+- `src/components` - Переиспользуемые UI компоненты (Навбар, Звездный рейтинг)
+- `src/services` - Взаимодействие с API (запросы через axios/fetch)
+- `src/assets` - Статические изображения и стили
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚙️ Конфигурация
+URL для API настроен в файле `src/services/api.js`.
+По умолчанию он указывает на `http://localhost:8080/api`.
